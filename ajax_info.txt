@@ -1,0 +1,2 @@
+<h3>AJAX dengan jQuery</h3>
+<p>Ini merupakan contoh implementasi $.ajax().</p> 
