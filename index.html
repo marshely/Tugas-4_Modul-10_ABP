@@ -17,42 +17,7 @@
         $(document).ready(function() {
 
             $("#changeBtn").click(function() {
-
-                $.ajax({
-                    // URL yang akan diakses
-                    url: "ajax_info.txt",
-
-                    // Metode HTTP
-                    type: "GET",
-
-                    // Data yang dikirim ke server
-                    data: {
-                        id: 123,
-                        name: "John"
-                    },
-
-                    // Tipe data dari server
-                    dataType: "html",
-
-                    // Timeout (5 detik)
-                    timeout: 5000,
-
-                    // Jika request berhasil
-                    success: function(result) {
-                        $("#demo").html(result);
-                    },
-
-                    // Jika terjadi error
-                    error: function(xhr, status, error) {
-                        $("#demo").html("Error: " + error);
-                    },
-
-                    // Selalu dijalankan setelah selesai
-                    complete: function(xhr, status) {
-                        console.log("Request completed with status: " + status);
-                    }
-                });
-
+                $("#demo").load("ajax_info.txt");
             });
 
         });
